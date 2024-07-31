@@ -11,9 +11,18 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
 
   const globalFilters = {
     situacao: ["destaque", "promocao", "queima de estoque"],
-    cor: ["marrom", "preto"],
+    cor: ["marrom", "preto", "vermelho", "azul", "terracota", "verde"],
     disponibilidade: ["sim", "não"],
-    valor: ["500", "999", "1500", "2000", "2500", "3000", "4000", "5000"],
+    rangedevalor: [
+      "499",
+      "999",
+      "1499",
+      "1999",
+      "2499",
+      "2999",
+      "3999",
+      "4999",
+    ],
   };
 
   const categoryFilters: Record<string, string[]> = {
@@ -61,7 +70,11 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
       if (newFilters[key] === value) {
         delete newFilters[key];
       } else {
-        newFilters[key] = value;
+        if (key === "rangedevalor") {
+          newFilters[key] = value;
+        } else {
+          newFilters[key] = value;
+        }
       }
       return newFilters;
     });
@@ -148,15 +161,20 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
         <div>
           <h2 className="mb-2 text-base font-semibold">Range de Valor:</h2>
           <div className="flex flex-wrap gap-2">
-            {globalFilters.valor.map((valor) => (
-              <label key={valor} className="flex items-center mb-2 text-sm">
+            {globalFilters.rangedevalor.map((rangedevalor) => (
+              <label
+                key={rangedevalor}
+                className="flex items-center mb-2 text-sm"
+              >
                 <input
                   type="checkbox"
-                  checked={filters.valor === valor}
-                  onChange={() => handleFilterChange("valor", valor)}
+                  checked={filters.rangedevalor === rangedevalor}
+                  onChange={() =>
+                    handleFilterChange("rangedevalor", rangedevalor)
+                  }
                   className="mr-2"
                 />
-                Até R${valor}
+                Até R${rangedevalor}
               </label>
             ))}
           </div>

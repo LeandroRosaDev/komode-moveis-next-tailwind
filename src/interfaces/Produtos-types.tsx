@@ -27,6 +27,7 @@ export type Produto = {
   link_1?: string;
   link_2?: string;
   descricao?: string;
+  rangedevalor?: string;
   altura?: string;
   largura?: string;
   profundidade_aberto?: string;
