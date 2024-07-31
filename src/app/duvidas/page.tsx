@@ -4,13 +4,13 @@ export default function DuvidasPage() {
   return (
     <section className="w-full">
       <div className="bg-[url('/assets/duvidas/duvidas-bg.png')] h-[500px] w-full bg-cover bg-center mt-[-200px] text-white text-center flex flex-col items-center justify-center">
-        <h1 className="mt-[200px] text-[2.5rem] uppercase font-light">
+        <h1 className=" mt-[350px] text-3xl sm:text-5xl uppercase font-light">
           Dúvidas Frequentes
         </h1>
         <p>Retire todas as suas dúvidas abaixo</p>
       </div>
 
-      <div className="flex flex-col items-center gap-16 my-24 px-2">
+      <div className="flex flex-col items-center gap-16 my-24 px-6">
         <div className="flex flex-col lg:flex-row max-w-5xl gap-4 rounded-lg overflow-hidden">
           <Image
             src="/assets/duvidas/duvidas-img-1.png"

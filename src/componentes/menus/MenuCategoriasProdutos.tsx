@@ -8,7 +8,7 @@ const MenuCategoriasProdutos = () => {
         <h1 className="text-4xl uppercase font-light mt-48">Produtos</h1>
         <p>Confira abaixo todos os produtos disponíveis em nosso estoque</p>
       </div>
-      <div className="flex justify-center flex-wrap gap-10 sm:gap-24 p-2 bg-white duration-500">
+      <div className="flex sm:justify-center justify-around flex-wrap gap-10 sm:gap-24 px-4 py-2 bg-white duration-500">
         {[
           {
             href: "/categorias/Sala de Estar",
@@ -56,9 +56,9 @@ const MenuCategoriasProdutos = () => {
               alt={category.text}
               width={60}
               height={70}
-              className="transition-transform duration-600 group-hover:mt-[-10px]"
+              className="transition-transform duration-600 group-hover:mt-[-10px] sm:w-[60px] w-12"
             />
-            <p className="text-center">{category.text}</p>
+            <p className="text-center text-xs sm:text-base">{category.text}</p>
           </Link>
         ))}
       </div>

@@ -5,7 +5,7 @@ const MenuCategorias = () => {
   return (
     <main>
       <div className="relative h-56 w-full bg-cover bg-center text-black flex flex-col items-center justify-center -mt-48"></div>
-      <div className=" sm:gap-24 gap-6 flex justify-center sm:justify-evenly flex-wrap  p-4 duration-500 bg">
+      <div className=" sm:gap-24 gap-6 flex justify-around sm:justify-evenly flex-wrap  p-4 duration-500 bg">
         {[
           {
             href: "/categorias/Sala de Estar",

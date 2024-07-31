@@ -100,7 +100,7 @@ export default function Menu() {
               <Link href="/">Início</Link>
             </li>
             <li className="relative subMenu">
-              <Link href="/produtos">Produtos</Link>
+              <p className="cursor-pointer">Produtos</p>
               <ul className="secondMenu flex-col hidden absolute">
                 <li>
                   <Link href="/categorias/Sala de Estar"> Sala de Estar </Link>

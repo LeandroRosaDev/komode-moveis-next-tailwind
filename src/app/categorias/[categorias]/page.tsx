@@ -18,7 +18,7 @@ const CategoriasPage = ({ params }: PageParams) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   const fetchProdutos = useCallback(async () => {
-    let url = `https://apikomode.altuori.com/wp-json/api/produto?disponibilidade=sim&categoria=${params.categorias}&q=${searchTerm}`;
+    let url = `https://apikomode.altuori.com/wp-json/api/produto?disponibilidade=sim&categoria=${params.categorias}&q=${searchTerm}&_limit=24`;
     Object.keys(filters).forEach((key) => {
       url += `&${key}=${filters[key]}`;
     });
@@ -143,15 +143,15 @@ const CategoriasPage = ({ params }: PageParams) => {
           />
         </div>
 
-        <div className="flex flex-wrap gap-5 justify-center max-w-5xl mb-20">
+        <div className="flex flex-wrap sm:gap-5 gap-3 justify-center max-w-5xl mb-20">
           {produtos.map((produto: any) => (
             <div
               key={produto.id}
-              className="relative w-72 h-[350px] bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-transform transform hover:scale-105 flex flex-col items-center text-center p-4 group cursor-pointer"
+              className="relative w-48 sm:w-72 h-[250px] sm:h-[350px] bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-transform transform hover:scale-105 flex flex-col items-center text-center p-1 sm:p-4 group cursor-pointer"
             >
               {produto.fotos && produto.fotos.length > 0 && (
                 <Link href={`/produtos/${produto.id}`}>
-                  <div className="relative w-full h-48">
+                  <div className="relative w-full sm:h-48 h-36">
                     <Image
                       src={produto.fotos[0].src}
                       alt={`Imagem de ${produto.nome}`}
@@ -171,12 +171,12 @@ const CategoriasPage = ({ params }: PageParams) => {
                   </div>
                 </Link>
               )}
-              <div className="text-left w-60 mt-4">
-                <h2 className="text-lg truncate">{produto.nome}</h2>
-                <p className="line-through text-red-600 text-sm">
+              <div className="text-left w-40 sm:w-60 sm:mt-4 mt-0">
+                <h2 className="sm:text-lg text-sm truncate">{produto.nome}</h2>
+                <p className="line-through text-red-600 sm:text-sm text-xs">
                   De: {produto.preco_original}
                 </p>
-                <p className="text-xl">
+                <p className="sm:text-xl text-sm">
                   Por: {produto.preco} <span className="text-sm">à vista</span>
                 </p>
                 <p className="text-xs text-gray-600">

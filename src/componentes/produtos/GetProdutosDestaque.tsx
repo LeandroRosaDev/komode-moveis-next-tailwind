@@ -64,7 +64,7 @@ const GetProdutosDestaque = () => {
                   </div>
                 </div>
               )}
-              <div className="text-left w-32 sm:w-60 mt-4">
+              <div className="text-left w-40 sm:w-60 mt-4">
                 <h2 className="sm:text-lg text-sm truncate">{produto.nome}</h2>
                 <p className="line-through text-red-600 sm:text-sm text-xs">
                   De: {produto.preco_original}
@@ -73,7 +73,7 @@ const GetProdutosDestaque = () => {
                   Por: {produto.preco} <span className="text-sm">à vista</span>
                 </p>
                 <p className="text-xs text-gray-600">
-                  Ou no cartão em até 12x de: {produto.preco_parcelado}
+                  Ou em até 12x de: {produto.preco_parcelado}
                 </p>
               </div>
             </div>

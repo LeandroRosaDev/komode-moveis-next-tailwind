@@ -5,15 +5,15 @@ export default function ContatoPage() {
   return (
     <section className="w-full ">
       <div className="bg-[url('/assets/contato/bg-contato.png')] w-full h-[750px] bg-cover bg-center flex flex-col items-center justify-center text-white text-center mt-[-200px]">
-        <h1 className="mt-[250px] text-[2.5rem] uppercase font-light">
+        <h1 className="sm:mt-[250px] mt-[200px] text-[2.5rem] uppercase font-light">
           Contato
         </h1>
         <p>Fale conosco</p>
       </div>
       <section className="flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center sm:mt-[-100px] mt-[-200px] bg-white rounded-t-lg sm:w-[80%] w-[95%]">
-          <div className="flex justify-center flex-wrap py-12 sm:gap-20 gap-6 w-full">
-            <div className="flex flex-col items-center gap-8 text-center w-[250px]">
+        <div className="flex flex-col items-center justify-center sm:mt-[-100px] mt-[-200px] bg-white rounded-t-lg sm:w-[80%] w-[90%]">
+          <div className="flex justify-center flex-wrap sm:py-12 py-4 sm:gap-20 gap-4 w-full">
+            <div className="flex flex-col items-center sm:gap-8 gap-2 text-center w-[250px]">
               <Image
                 src="/assets/contato/contato-icon-3.png"
                 width={60}
@@ -27,7 +27,7 @@ export default function ContatoPage() {
                 Rua Píres do Rio, 509 - Éden, <br /> São joão de meriti - RJ
               </p>
             </div>
-            <div className="flex flex-col items-center gap-8 text-center w-[250px]">
+            <div className="flex flex-col items-center sm:gap-8 gap-2 text-center w-[250px]">
               <Image
                 src="/assets/contato/contato-icon-1.png"
                 width={60}
@@ -41,7 +41,7 @@ export default function ContatoPage() {
                 T +55 21 9 7899-1540 <br />
               </p>
             </div>
-            <div className="flex flex-col items-center gap-8 text-center w-[250px]">
+            <div className="flex flex-col items-center sm:gap-8 gap-2 text-center w-[250px]">
               <Image
                 src="/assets/contato/contato-icon-2.png"
                 width={60}
@@ -57,7 +57,7 @@ export default function ContatoPage() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center text-center bg-gray-600 text-white p-6 sm:12 gap-5 sm:w-[80%] w-[95%] rounded-b-lg mb-[100px]">
+        <div className="flex flex-col items-center text-center bg-gray-600 text-white p-6 sm:12 gap-5 sm:w-[80%] w-[90%] rounded-b-lg mb-[100px]">
           <h1 className="text-2xl">ENVIE-NOS UMA MENSAGEM</h1>
           <p>
             Agradeçemos o seu contato, atendemos normalmente de segunda a sexta

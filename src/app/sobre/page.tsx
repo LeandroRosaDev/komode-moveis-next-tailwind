@@ -20,7 +20,7 @@ export default function SobrePage() {
           entre nossos colaboradores.
         </h3>
       </section>
-      <div className="relative w-full flex flex-col items-center mt-8 gap-20 px-2">
+      <div className="relative w-full flex flex-col items-center mt-8 gap-20 px-6">
         <div className="absolute w-[4px] h-full bg-red-600 z-0"></div>
         <div className="relative flex flex-wrap items-center justify-center sm:justify-between w-full max-w-7xl text-center bg-white shadow-md">
           <div className="relative flex items-center flex-col sm:flex-row">
