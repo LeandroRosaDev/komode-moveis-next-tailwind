@@ -4,11 +4,8 @@ import Link from "next/link";
 const MenuCategorias = () => {
   return (
     <main>
-      <div className="relative h-96 w-full bg-cover bg-center text-white flex flex-col items-center justify-center -mt-48">
-        <h1 className="text-4xl uppercase font-light mt-48">Produtos</h1>
-        <p>Confira abaixo todos os produtos disponíveis em nosso estoque</p>
-      </div>
-      <div className="flex justify-center flex-wrap gap-24 p-4 duration-500">
+      <div className="relative h-56 w-full bg-cover bg-center text-black flex flex-col items-center justify-center -mt-48"></div>
+      <div className=" sm:gap-24 gap-6 flex justify-center sm:justify-evenly flex-wrap  p-4 duration-500 bg">
         {[
           {
             href: "/categorias/Sala de Estar",
@@ -56,9 +53,9 @@ const MenuCategorias = () => {
               alt={category.text}
               width={60}
               height={70}
-              className="transition-transform duration-600 group-hover:mt-[-10px]"
+              className="transition-transform duration-600 group-hover:mt-[-10px] sm:w-[60px] w-14"
             />
-            <p className="text-center">{category.text}</p>
+            <p className="text-center text-xs sm:text-base">{category.text}</p>
           </Link>
         ))}
       </div>

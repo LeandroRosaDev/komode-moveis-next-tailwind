@@ -4,11 +4,11 @@ import Link from "next/link";
 const MenuCategoriasProdutos = () => {
   return (
     <main>
-      <div className="bg-[url('/assets/produtos/produtos-bg.jpg')] relative h-[580px] w-full bg-cover bg-center text-white flex flex-col items-center justify-center -mt-48">
+      <div className="bg-[url('/assets/produtos/produtos-bg.jpg')] relative sm:h-[580px] h-[380px] w-full bg-cover bg-center text-white flex flex-col items-center justify-center -mt-12 sm:-mt-48 text-center px-2">
         <h1 className="text-4xl uppercase font-light mt-48">Produtos</h1>
         <p>Confira abaixo todos os produtos disponíveis em nosso estoque</p>
       </div>
-      <div className="flex justify-center flex-wrap gap-24 p-4 bg-white duration-500">
+      <div className="flex justify-center flex-wrap gap-10 sm:gap-24 p-2 bg-white duration-500">
         {[
           {
             href: "/categorias/Sala de Estar",

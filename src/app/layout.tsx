@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className="h-[2900px]">
+      <body>
         <Menu />
         {children}
         <WhatsappButton />

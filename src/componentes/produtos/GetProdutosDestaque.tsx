@@ -4,6 +4,7 @@ import { Produto } from "@/interfaces/Produtos-types";
 import Image from "next/image";
 import Link from "next/link";
 import { getProductsDestaqueAction } from "@/action/produtos/get-produtos-destaque-action";
+import LoadingSpinner from "../helpers/Loading";
 
 const GetProdutosDestaque = () => {
   const [produtos, setProdutos] = useState<Produto[]>([]);
@@ -31,7 +32,7 @@ const GetProdutosDestaque = () => {
   }, []);
 
   if (loading) {
-    return <div className="text-center">Carregando...</div>;
+    return <LoadingSpinner />;
   }
 
   if (error) {
@@ -40,10 +41,10 @@ const GetProdutosDestaque = () => {
 
   return (
     <section className="flex flex-col items-center justify-center">
-      <div className="flex flex-wrap gap-5 justify-center max-w-7xl mx-auto my-8">
-        {produtos.map((produto: any) => (
+      <div className="flex flex-wrap sm:gap-5 gap-2 justify-center max-w-7xl my-8">
+        {produtos.map((produto) => (
           <Link key={produto.id} href={`/produtos/${produto.id}`}>
-            <div className="relative w-72 bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-transform transform hover:scale-105 flex flex-col items-center text-center p-4 group cursor-pointer">
+            <div className="relative w-48 sm:w-full bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-transform transform hover:scale-105 flex flex-col items-center text-center sm:p-4 p-1 group cursor-pointer">
               {produto.fotos && produto.fotos.length > 0 && (
                 <div className="relative w-full h-48">
                   <Image
@@ -53,6 +54,9 @@ const GetProdutosDestaque = () => {
                     objectFit="cover"
                     className="w-full h-full transition-opacity duration-500 rounded-md group-hover:opacity-30"
                   />
+                  <div className="absolute top-2 left-2 bg-red-700 text-white text-xs py-1 px-2 rounded-full font-bold">
+                    Frete Grátis
+                  </div>
                   <div className="absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                     <span className="bg-red-700 text-white text-lg py-2 px-4 rounded-lg hover:bg-red-800">
                       Ver detalhes
@@ -60,12 +64,12 @@ const GetProdutosDestaque = () => {
                   </div>
                 </div>
               )}
-              <div className="text-left w-60 mt-4">
-                <h2 className="text-lg truncate">{produto.nome}</h2>
-                <p className="line-through text-red-600 text-sm">
+              <div className="text-left w-32 sm:w-60 mt-4">
+                <h2 className="sm:text-lg text-sm truncate">{produto.nome}</h2>
+                <p className="line-through text-red-600 sm:text-sm text-xs">
                   De: {produto.preco_original}
                 </p>
-                <p className="text-xl">
+                <p className="sm:text-xl text-sm">
                   Por: {produto.preco} <span className="text-sm">à vista</span>
                 </p>
                 <p className="text-xs text-gray-600">

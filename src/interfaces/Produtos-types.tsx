@@ -45,7 +45,7 @@ export type Produto = {
 
 export type PageParams = {
   params: {
-    produto: string;
+    produtos: string;
     categorias: string;
     subcategorias: string;
   };

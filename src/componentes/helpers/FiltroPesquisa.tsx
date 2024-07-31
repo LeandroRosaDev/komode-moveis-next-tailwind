@@ -76,9 +76,9 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
   }, [filters, onFilterChange]);
 
   return (
-    <section className="w-full md:w-64 h-full p-4 bg-gray-100 rounded-lg shadow-md m-2 md:m-8 md:mr-5">
+    <section className="w-full md:w-64 h-full p-4 bg-gray-100 rounded-lg shadow-md mb-2">
       <h3 className="mb-4 text-lg font-semibold">Filtros:</h3>
-      <div className="flex flex-col space-y-4">
+      <div className="flex flex-wrap justify-between sm:flex-col flex-row gap-2 ">
         <div>
           <h2 className="mb-2 text-base font-semibold">Produtos:</h2>
           {availableFilters.map((subCategoria) => (

@@ -31,7 +31,7 @@ export default function Menu() {
 
   return (
     <nav className="flex flex-col justify-center items-center w-full z-50 absolute">
-      <ul className="flex justify-end gap-4 w-4/5 mt-12">
+      <ul className="flex justify-end gap-4 w-4/5 mt-12 mb-2">
         <li>
           <Link
             target="_blank"
@@ -79,7 +79,7 @@ export default function Menu() {
             alt="logotipo"
             width={100}
             height={100}
-            className="rounded-full"
+            className="w-14 sm:w-auto rounded-full"
           />
         </Link>
         <div className="relative">
@@ -91,7 +91,11 @@ export default function Menu() {
             <div className="bar2"></div>
             <div className="bar3"></div>
           </button>
-          <ul className={`desktopMenu ${menuOpen ? "open" : ""} flex gap-8`}>
+          <ul
+            className={`desktopMenu text-white ${
+              menuOpen ? "open" : ""
+            } flex gap-8`}
+          >
             <li>
               <Link href="/">Início</Link>
             </li>

@@ -12,7 +12,7 @@ const PesquisaProdutos = ({ onSearch }: SearchBarProps) => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row justify-center items-center m-4 gap-2">
+    <div className="flex  sm:flex-row justify-center items-center mx-4 mb-2 gap-2 ">
       <input
         type="text"
         value={searchTerm}
@@ -22,7 +22,7 @@ const PesquisaProdutos = ({ onSearch }: SearchBarProps) => {
       />
       <button
         onClick={handleSearch}
-        className="bg-yellow-500 text-white py-2 px-4 rounded transition duration-100 hover:bg-yellow-600 focus:outline-none focus:shadow-outline w-full sm:w-auto"
+        className="bg-red-600 text-white py-2 px-4 rounded transition duration-100 hover:bg-red-700 focus:outline-none focus:shadow-outline w-full sm:w-auto"
       >
         Pesquisar
       </button>
