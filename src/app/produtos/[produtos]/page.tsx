@@ -126,11 +126,10 @@ export default function ProdutoPage({ params }: PageParams) {
                 Ou 12x de: {data.preco_parcelado}
               </span>
             </div>
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <h3 className="text-lg">Cor:</h3>
-              {/* Renderização de cores */}
               <span className="w-5 h-5 border border-black rounded-full"></span>
-            </div>
+            </div> */}
             <a
               target="_blank"
               href={data.link_1}

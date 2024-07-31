@@ -57,6 +57,11 @@ const GetProdutosDestaque = () => {
                   <div className="absolute top-2 left-2 bg-red-700 text-white text-xs py-1 px-2 rounded-full font-bold">
                     Frete Grátis
                   </div>
+                  {produto.profundidade_fechado && (
+                    <div className="absolute top-2 right-2 bg-green-700 text-white text-xs w-12 h-12 py-4 px-1 rounded-full font-bold text-center">
+                      {produto.largura} m
+                    </div>
+                  )}
                   <div className="absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                     <span className="bg-red-700 text-white text-lg py-2 px-4 rounded-lg hover:bg-red-800">
                       Ver detalhes
