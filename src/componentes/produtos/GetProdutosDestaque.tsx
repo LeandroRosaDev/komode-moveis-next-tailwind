@@ -58,7 +58,7 @@ const GetProdutosDestaque = () => {
                     Frete Grátis
                   </div>
                   {produto.profundidade_fechado && (
-                    <div className="absolute top-2 right-2 bg-green-700 text-white text-xs w-12 h-12 py-4 px-1 rounded-full font-bold text-center">
+                    <div className="absolute top-2 right-2 bg-green-700 text-white sm:text-xs text-[8px] sm:w-12 w-10 sm:h-12 h-10 sm:py-4 py-3 px-1 rounded-full font-bold text-center">
                       {produto.largura} m
                     </div>
                   )}

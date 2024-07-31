@@ -23,6 +23,7 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
       "3999",
       "4999",
     ],
+    largura: ["1,80", "2,00", "2,30", "2,50", "2,70", "2,90"],
   };
 
   const categoryFilters: Record<string, string[]> = {
@@ -70,11 +71,7 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
       if (newFilters[key] === value) {
         delete newFilters[key];
       } else {
-        if (key === "rangedevalor") {
-          newFilters[key] = value;
-        } else {
-          newFilters[key] = value;
-        }
+        newFilters[key] = value;
       }
       return newFilters;
     });
@@ -108,6 +105,20 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
                 className="mr-2"
               />
               {subCategoria}
+            </label>
+          ))}
+        </div>
+        <div>
+          <h2 className="mb-2 text-base font-semibold">Largura:</h2>
+          {globalFilters.largura.map((largura) => (
+            <label key={largura} className="flex items-center mb-2 text-sm">
+              <input
+                type="checkbox"
+                checked={filters.largura === largura}
+                onChange={() => handleFilterChange("largura", largura)}
+                className="mr-2"
+              />
+              {largura} m
             </label>
           ))}
         </div>
@@ -161,22 +172,20 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
         <div>
           <h2 className="mb-2 text-base font-semibold">Range de Valor:</h2>
           <div className="flex flex-wrap gap-2">
-            {globalFilters.rangedevalor.map((rangedevalor) => (
-              <label
-                key={rangedevalor}
-                className="flex items-center mb-2 text-sm"
-              >
-                <input
-                  type="checkbox"
-                  checked={filters.rangedevalor === rangedevalor}
-                  onChange={() =>
-                    handleFilterChange("rangedevalor", rangedevalor)
-                  }
-                  className="mr-2"
-                />
-                Até R${rangedevalor}
-              </label>
-            ))}
+            <select
+              className="border border-gray-300 rounded-md bg-gray-100 p-2 focus:outline-none focus:border-red-500 focus:bg-white focus:shadow-outline"
+              value={filters.rangedevalor || ""}
+              onChange={(e) =>
+                handleFilterChange("rangedevalor", e.target.value)
+              }
+            >
+              <option value="">Selecione um valor</option>
+              {globalFilters.rangedevalor.map((rangedevalor) => (
+                <option key={rangedevalor} value={rangedevalor}>
+                  Até R${rangedevalor}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
       </div>
