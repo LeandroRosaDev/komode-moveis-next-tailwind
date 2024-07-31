@@ -1,4 +1,10 @@
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Komode | Dúvidas",
+  description: "Retire todas as dúvidas sobre nossos serviços nesta seção!",
+};
 
 export default function DuvidasPage() {
   return (

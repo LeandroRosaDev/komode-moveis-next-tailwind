@@ -1,6 +1,11 @@
-"use client";
-
+import type { Metadata } from "next";
 import PostReclamacao from "@/componentes/reclamacoes/PostReclamacao";
+
+export const metadata: Metadata = {
+  title: "Komode | Reclame Aqui",
+  description:
+    "Nós preservamos a comunicação em primeiro lugar, então disponibilizamos um canal onde os clientes conseguem enviar reclamações!",
+};
 
 export default function reclamacaoPage() {
   return (

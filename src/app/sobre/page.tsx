@@ -1,4 +1,11 @@
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Komode | Sobre",
+  description:
+    "Saiba um pouco sobre a história da nossa loja, como começamos e como revolucionamos o mercado de móveis",
+};
 
 export default function SobrePage() {
   return (

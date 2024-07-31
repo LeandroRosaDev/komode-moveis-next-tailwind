@@ -1,5 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Komode | Contato",
+  description:
+    "Converse com nossos especialistas que estão sempre prontos para te atender durante qualquer momento do dia!",
+};
 
 export default function ContatoPage() {
   return (
