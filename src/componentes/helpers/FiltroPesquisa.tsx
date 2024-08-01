@@ -23,7 +23,7 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
       "3999",
       "4999",
     ],
-    largura: ["1,80", "2,00", "2,30", "2,50", "2,70", "2,90"],
+    largura: ["1.80", "2.00", "2.30", "2.50", "2.70", "2.90"],
   };
 
   const categoryFilters: Record<string, string[]> = {
