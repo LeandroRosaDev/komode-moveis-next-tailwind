@@ -10,10 +10,10 @@ const Footer = () => {
             <h1 className="text-2xl uppercase text-red-600">
               Visite nosso show room
             </h1>
-            <p className="text-gray-500">
+            <p className="text-gray-100">
               Rua Pires do rio nº509 São João de Meriti, RJ
             </p>
-            <p className="text-gray-500">
+            <p className="text-gray-100">
               Seg - De: 08 as: 18 pm | Sáb: 08 am - 12 pm
             </p>
           </div>
@@ -51,25 +51,25 @@ const Footer = () => {
         <div className="flex sm:justify-between justify-center text-center sm:text-start items-center gap-12 sm:gap-24 w-full flex-wrap">
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl uppercase text-red-600">Encontre Aqui</h1>
-            <Link className="text-gray-500 font-semibold" href="/">
+            <Link className="text-gray-100 font-semibold" href="/">
               Inicio
             </Link>
-            <Link className="text-gray-500 font-semibold" href="/produtos">
+            <Link className="text-gray-100 font-semibold" href="/produtos">
               Produtos
             </Link>
-            <Link className="text-gray-500 font-semibold" href="/produtos">
+            <Link className="text-gray-100 font-semibold" href="/produtos">
               Categorias
             </Link>
           </div>
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl uppercase text-red-600">Links Diretos</h1>
-            <Link className="text-gray-500 font-semibold" href="/sobre">
+            <Link className="text-gray-100 font-semibold" href="/sobre">
               Sobre
             </Link>
-            <Link className="text-gray-500 font-semibold" href="/contato">
+            <Link className="text-gray-100 font-semibold" href="/contato">
               Contato
             </Link>
-            <Link className="text-gray-500 font-semibold" href="/duvidas">
+            <Link className="text-gray-100 font-semibold" href="/duvidas">
               Dúvidas
             </Link>
           </div>
@@ -77,13 +77,13 @@ const Footer = () => {
             <h1 className="text-2xl uppercase text-red-600">
               Política da loja
             </h1>
-            <Link className="text-gray-500 font-semibold" href="/politicas">
+            <Link className="text-gray-100 font-semibold" href="/politicas">
               Trocas
             </Link>
-            <Link className="text-gray-500 font-semibold" href="/politicas">
+            <Link className="text-gray-100 font-semibold" href="/politicas">
               Garantia
             </Link>
-            <Link className="text-gray-500 font-semibold" href="/reclame-aqui">
+            <Link className="text-gray-100 font-semibold" href="/reclame-aqui">
               Reclame Aqui
             </Link>
           </div>

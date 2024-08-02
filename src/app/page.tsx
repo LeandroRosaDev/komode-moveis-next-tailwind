@@ -48,9 +48,9 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-center mb-4">
           Produtos Populares
         </h1>
-        <h3 className="text-2xl text-center mb-8">
+        <h2 className="text-2xl text-center mb-8">
           Venha conferir nossos produtos em destaque
-        </h3>
+        </h2>
         <GetProdutosDestaque />
       </section>
 
@@ -163,9 +163,9 @@ export default function Home() {
       {/* Dúvidas */}
       <section className="flex flex-col items-center justify-center my-16">
         <h1 className="text-4xl font-bold text-center mb-4">Dúvidas</h1>
-        <h3 className="text-2xl text-center mb-8">
+        <h2 className="text-2xl text-center mb-8">
           Tirem suas principais dúvidas conosco
-        </h3>
+        </h2>
         <div className="flex flex-wrap justify-center gap-4">
           <Link
             href="/duvidas"
@@ -226,14 +226,14 @@ export default function Home() {
 
       {/* Sigam-nos no Instagram */}
       <section className="flex flex-col items-center justify-center mt-16 pt-4 bg-white">
-        <h1 className="text-4xl font-light text-center mb-4 uppercase">
+        <h1 className="text-4xl font-light text-center mb-4 uppercase mx-1">
           Sigam-nos no Instagram
         </h1>
-        <h3 className="text-2xl text-center mb-8">
+        <h2 className="text-2xl text-center mb-8">
           <a target="blank" href="https://www.instagram.com/komodemd/">
             @komodemd
           </a>
-        </h3>
+        </h2>
         <div className="w-full flex justify-center bg-black">
           <div className="flex justify-center items-center flex-wrap w-full  overflow-hidden">
             <Image

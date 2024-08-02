@@ -83,14 +83,14 @@ export default function Menu() {
           />
         </Link>
         <div className="relative">
-          <button
+          <p
             className={`hamburger ${menuOpen ? "open" : ""}`}
             onClick={toggleMenu}
           >
             <div className="bar1"></div>
             <div className="bar2"></div>
             <div className="bar3"></div>
-          </button>
+          </p>
           <ul
             className={`desktopMenu text-white ${
               menuOpen ? "open" : ""
