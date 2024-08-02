@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ContatoPage() {
   return (
     <section className="w-full ">
-      <div className="bg-[url('/assets/contato/bg-contato.png')] w-full h-[750px] bg-cover bg-center flex flex-col items-center justify-center text-white text-center mt-[-200px]">
+      <div className="bg-[url('/assets/contato/bg-contato.webp')] w-full h-[750px] bg-cover bg-center flex flex-col items-center justify-center text-white text-center mt-[-200px]">
         <h1 className="sm:mt-[250px] mt-[200px] text-[2.5rem] uppercase font-light">
           Contato
         </h1>
@@ -85,6 +85,7 @@ export default function ContatoPage() {
           height="450"
           loading="lazy"
           className="w-full"
+          title="Mapa com a localização da nossa loja"
         ></iframe>
       </section>
     </section>

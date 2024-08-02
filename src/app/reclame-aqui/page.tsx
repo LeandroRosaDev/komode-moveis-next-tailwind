@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function reclamacaoPage() {
   return (
     <section className="w-full">
-      <div className="bg-[url('/assets/reclamacoes/bg-reclamacoes.jpg')] h-[550px] w-full bg-cover bg-center mt-[-200px] text-white text-center flex flex-col items-center justify-center">
+      <div className="bg-[url('/assets/reclamacoes/bg-reclamacoes.webp')] h-[550px] w-full bg-cover bg-center mt-[-200px] text-white text-center flex flex-col items-center justify-center">
         <h1 className="mt-[400px] sm:mt-[300px] text-[2.5rem] uppercase font-semibold">
           Reclame aqui
         </h1>

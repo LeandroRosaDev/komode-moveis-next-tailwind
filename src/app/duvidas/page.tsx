@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function DuvidasPage() {
   return (
     <section className="w-full">
-      <div className="bg-[url('/assets/duvidas/duvidas-bg.png')] h-[500px] w-full bg-cover bg-center mt-[-200px] text-white text-center flex flex-col items-center justify-center">
+      <div className="bg-[url('/assets/duvidas/duvidas-bg.webp')] h-[500px] w-full bg-cover bg-center mt-[-200px] text-white text-center flex flex-col items-center justify-center">
         <h1 className=" mt-[350px] text-3xl sm:text-5xl uppercase font-light">
           Dúvidas Frequentes
         </h1>
@@ -19,11 +19,11 @@ export default function DuvidasPage() {
       <div className="flex flex-col items-center gap-16 my-24 px-6">
         <div className="flex flex-col lg:flex-row max-w-5xl gap-4 rounded-lg overflow-hidden">
           <Image
-            src="/assets/duvidas/duvidas-img-1.png"
-            width={600}
-            height={400}
+            src="/assets/duvidas-img-1.webp"
+            width={1080}
+            height={650}
             alt="Imagem de uma entrega"
-            className="rounded-lg"
+            className="w-[600px] h-[400px] rounded-lg"
           />
           <div className="bg-white shadow-md text-center rounded-lg p-6 flex-1">
             <h2 className="text-2xl font-semibold mb-4">Prazo de Entrega</h2>
@@ -47,11 +47,11 @@ export default function DuvidasPage() {
 
         <div className="flex flex-col lg:flex-row max-w-5xl gap-4 rounded-lg overflow-hidden">
           <Image
-            src="/assets/duvidas/duvidas-img-2.png"
-            width={600}
-            height={400}
+            src="/assets/duvidas-img-2.webp"
+            width={1080}
+            height={650}
             alt="Imagem de coleta de assinatura"
-            className="rounded-lg lg:hidden"
+            className="w-[600px] h-[400px] rounded-lg lg:hidden"
           />
           <div className="bg-white shadow-md text-center rounded-lg p-6 flex-1">
             <h2 className="text-2xl font-semibold mb-4">Prazo de Garantia</h2>
@@ -72,21 +72,21 @@ export default function DuvidasPage() {
             </p>
           </div>
           <Image
-            src="/assets/duvidas/duvidas-img-2.png"
-            width={600}
-            height={400}
+            src="/assets/duvidas-img-2.webp"
+            width={1080}
+            height={650}
             alt="Imagem de coleta de assinatura"
-            className="rounded-lg hidden lg:flex"
+            className="w-[600px] h-[400px] rounded-lg hidden lg:flex"
           />
         </div>
 
         <div className="flex flex-col lg:flex-row max-w-5xl gap-4 rounded-lg overflow-hidden">
           <Image
-            src="/assets/duvidas/duvidas-img-3.png"
+            src="/assets/duvidas-img-3.webp"
             width={600}
             height={400}
             alt="Imagem de um pagamento no cartão"
-            className="rounded-lg"
+            className="w-[600px] h-[400px] rounded-lg"
           />
           <div className="bg-white shadow-md text-center rounded-lg p-6 flex-1">
             <h2 className="text-2xl font-semibold mb-4">Pagamento</h2>

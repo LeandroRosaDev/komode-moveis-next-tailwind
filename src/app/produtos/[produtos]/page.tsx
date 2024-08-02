@@ -118,11 +118,13 @@ export default function ProdutoPage({ params }: PageParams) {
           <div className="lg:w-1/2 flex flex-col gap-4">
             <h1 className="text-2xl font-semibold">{data.nome}</h1>
             <div className="flex flex-col gap-2">
-              <span className="text-red-600 line-through">
+              <span className="font-bold text-lg text-red-600 line-through">
                 De: {data.preco_original}
               </span>
-              <span className="text-green-600 text-xl">Por: {data.preco}</span>
-              <span className="text-gray-500">
+              <span className="font-bold text-green-600 text-2xl">
+                Por: {data.preco}
+              </span>
+              <span className="font-bold text-gray-500">
                 Ou 12x de: {data.preco_parcelado}
               </span>
             </div>
@@ -152,13 +154,13 @@ export default function ProdutoPage({ params }: PageParams) {
             </li>
           </ul>
           <div>
-            <h3 className="text-xl font-semibold">
+            <h1 className="text-xl font-semibold">
               {data.nome_long} {data.cor}
-            </h3>
+            </h1>
             <p className="mt-2">{data.descricao}</p>
             {data.altura && data.largura && data.profundidade_aberto && (
               <div className="mt-4">
-                <h3 className="text-lg font-semibold">Medidas:</h3>
+                <h1 className="text-lg font-semibold">Medidas:</h1>
                 <p>Altura: {data.altura}m</p>
                 <p>Largura: {data.largura}m</p>
                 <p>Profundidade: {data.profundidade_aberto}m</p>
@@ -172,25 +174,25 @@ export default function ProdutoPage({ params }: PageParams) {
             )}
             {data.assento && (
               <div className="mt-4">
-                <h3 className="text-lg font-semibold">Assento:</h3>
+                <h1 className="text-lg font-semibold">Assento:</h1>
                 <p>{data.assento}</p>
               </div>
             )}
             {data.encosto && (
               <div className="mt-4">
-                <h3 className="text-lg font-semibold">Encosto:</h3>
+                <h1 className="text-lg font-semibold">Encosto:</h1>
                 <p>{data.encosto}</p>
               </div>
             )}
             {data.estrutura && (
               <div className="mt-4">
-                <h3 className="text-lg font-semibold">Características:</h3>
+                <h1 className="text-lg font-semibold">Características:</h1>
                 <p>{data.estrutura}</p>
               </div>
             )}
             {data.braco && (
               <div className="mt-4">
-                <h3 className="text-lg font-semibold">Braços:</h3>
+                <h1 className="text-lg font-semibold">Braços:</h1>
                 <p>{data.braco}</p>
               </div>
             )}

@@ -87,7 +87,7 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
 
   return (
     <section className="w-full md:w-64 h-full p-4 bg-gray-100 rounded-lg shadow-md mb-2">
-      <h3 className="mb-4 text-lg font-semibold">Filtros:</h3>
+      <h1 className="mb-4 text-lg font-semibold">Filtros:</h1>
       <div className="flex flex-wrap justify-between sm:flex-col flex-row gap-2 ">
         <div>
           <h2 className="mb-2 text-base font-semibold">Produtos:</h2>
