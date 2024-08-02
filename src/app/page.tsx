@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* Background principal */}
-      <div className="bg-[url('/assets/header-bg-1.png')] h-[580px] sm:h-[780px] bg-cover bg-center mt-[-200px]"></div>
+      <div className="bg-[url('/assets/header-bg-1.webp')] h-[580px] sm:h-[780px] bg-cover bg-center mt-[-200px]"></div>
 
       {/* Tarja vermelha */}
       <div className="w-full bg-red-700 text-white flex justify-center items-center text-xs uppercase flex-wrap gap-2 py-4">
@@ -59,7 +59,7 @@ export default function Home() {
         <div className="flex justify-center bg-black w-full overflow-hidden">
           <Link
             href="/categorias/sala de estar"
-            className="relative flex flex-col justify-center items-center text-white text-center h-[450px] sm:h-[750px] w-full sm:w-1/2 lg:w-1/4 bg-[url('/assets/categorias-img-1.png')] bg-cover group overflow-hidden transition-transform duration-500 ease-in-out hover:z-10 hover:scale-110"
+            className="relative flex flex-col justify-center items-center text-white text-center h-[450px] sm:h-[750px] w-full sm:w-1/2 lg:w-1/4 bg-[url('/assets/categorias-img-1.webp')] bg-cover group overflow-hidden transition-transform duration-500 ease-in-out hover:z-10 hover:scale-110"
           >
             <Image
               src="/assets/categoria-icon-1.png"
@@ -81,7 +81,7 @@ export default function Home() {
           </Link>
           <Link
             href="/categorias/quarto de solteiro"
-            className="relative flex flex-col justify-center items-center text-white text-center h-[450px] sm:h-[750px] w-full sm:w-1/2 lg:w-1/4 bg-[url('/assets/categorias-img-2.png')] bg-cover group overflow-hidden transition-transform duration-500 ease-in-out hover:z-10 hover:scale-110"
+            className="relative flex flex-col justify-center items-center text-white text-center h-[450px] sm:h-[750px] w-full sm:w-1/2 lg:w-1/4 bg-[url('/assets/categorias-img-2.webp')] bg-cover group overflow-hidden transition-transform duration-500 ease-in-out hover:z-10 hover:scale-110"
           >
             <Image
               src="/assets/categoria-icon-2.png"
@@ -100,7 +100,7 @@ export default function Home() {
           </Link>
           <Link
             href="/categorias/escritorio"
-            className="relative flex flex-col justify-center items-center text-white text-center h-[450px] sm:h-[750px] w-full sm:w-1/2 lg:w-1/4 bg-[url('/assets/categorias-img-3.png')] bg-cover group overflow-hidden transition-transform duration-500 ease-in-out hover:z-10 hover:scale-110"
+            className="relative flex flex-col justify-center items-center text-white text-center h-[450px] sm:h-[750px] w-full sm:w-1/2 lg:w-1/4 bg-[url('/assets/categorias-img-3.webp')] bg-cover group overflow-hidden transition-transform duration-500 ease-in-out hover:z-10 hover:scale-110"
           >
             <Image
               src="/assets/categoria-icon-3.png"
@@ -121,7 +121,7 @@ export default function Home() {
           </Link>
           <Link
             href="/categorias/banheiro"
-            className="relative flex flex-col justify-center items-center text-white text-center h-[450px] sm:h-[750px] w-full sm:w-1/2 lg:w-1/4 bg-[url('/assets/categorias-img-4.png')] bg-cover group overflow-hidden transition-transform duration-500 ease-in-out hover:z-10 hover:scale-110"
+            className="relative flex flex-col justify-center items-center text-white text-center h-[450px] sm:h-[750px] w-full sm:w-1/2 lg:w-1/4 bg-[url('/assets/categorias-img-4.webp')] bg-cover group overflow-hidden transition-transform duration-500 ease-in-out hover:z-10 hover:scale-110"
           >
             <Image
               src="/assets/categoria-icon-4.png"
@@ -142,7 +142,7 @@ export default function Home() {
       </section>
 
       {/* Nossa História */}
-      <section className="relative h-auto bg-[url('/assets/sobre-bg.png')] bg-fixed bg-center bg-cover flex items-center justify-center text-center text-white py-16 px-4">
+      <section className="relative h-auto bg-[url('/assets/sobre-bg.webp')] bg-fixed bg-center bg-cover flex items-center justify-center text-center text-white py-16 px-4">
         <div className="flex flex-col items-center justify-center gap-4 w-full max-w-2xl">
           <h1 className="text-4xl font-bold mb-4">Nossa História</h1>
           <p className="text-lg sm:text-xl">
@@ -172,7 +172,7 @@ export default function Home() {
             className="relative flex flex-col items-center justify-center bg-white overflow-hidden transition-transform duration-500 rounded-2xl  ease-in-out h-[330px] w-[90%] sm:w-[400px] group shadow-md hover:shadow-lg hover:scale-105 cursor-pointer"
           >
             <Image
-              src="/assets/duvidas-img-1.png"
+              src="/assets/duvidas-img-1.webp"
               alt="Imagem de entregas"
               layout="fill"
               objectFit="cover"
@@ -190,7 +190,7 @@ export default function Home() {
             className="relative flex flex-col items-center justify-center bg-white overflow-hidden transition-transform duration-500 ease-in-out h-[330px] w-[90%] sm:w-[400px] rounded-2xl group shadow-md hover:shadow-lg hover:scale-105 cursor-pointer"
           >
             <Image
-              src="/assets/duvidas-img-2.png"
+              src="/assets/duvidas-img-2.webp"
               alt="Imagem de um contrato"
               layout="fill"
               objectFit="cover"
@@ -208,7 +208,7 @@ export default function Home() {
             className="relative flex flex-col items-center justify-center bg-white overflow-hidden transition-transform duration-500 ease-in-out h-[330px] w-[90%] sm:w-[400px] rounded-2xl group shadow-md hover:shadow-lg hover:scale-105 cursor-pointer"
           >
             <Image
-              src="/assets/duvidas-img-3.png"
+              src="/assets/duvidas-img-3.webp"
               alt="Imagem de um cartão"
               layout="fill"
               objectFit="cover"
@@ -237,7 +237,7 @@ export default function Home() {
         <div className="w-full flex justify-center bg-black">
           <div className="flex justify-center items-center flex-wrap w-full  overflow-hidden">
             <Image
-              src="/assets/social-img.png"
+              src="/assets/social-img.webp"
               alt="Imagens de cômodos"
               width={1920}
               height={700}

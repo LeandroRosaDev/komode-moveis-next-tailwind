@@ -75,7 +75,7 @@ export default function Menu() {
       >
         <Link href="/">
           <Image
-            src="/assets/logotipo.png"
+            src="/assets/logotipo.webp"
             alt="logotipo"
             width={80}
             height={80}
