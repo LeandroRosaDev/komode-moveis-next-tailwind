@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* Background principal */}
-      <div className="bg-[url('/assets/header-bg-1.webp')] h-[580px] sm:h-[780px] bg-cover bg-center mt-[-200px]"></div>
+      <div className="bg-[url('/assets/header-bg-2.webp')] h-[580px] bg-cover bg-center"></div>
 
       {/* Tarja vermelha */}
       <div className="w-full bg-red-700 text-white flex justify-center items-center text-xs uppercase flex-wrap gap-2 py-4">
