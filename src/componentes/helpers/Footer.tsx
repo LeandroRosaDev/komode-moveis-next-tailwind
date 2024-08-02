@@ -27,7 +27,7 @@ const Footer = () => {
                 src="/assets/icon/location.svg"
                 width={20}
                 height={20}
-                alt="local"
+                alt="Icone que respresenta um gps indicando uma localização"
               />
               Encontre-nos
             </Link>
@@ -36,11 +36,11 @@ const Footer = () => {
                 src="/assets/icon/Phone.svg"
                 width={30}
                 height={30}
-                alt="telefone"
+                alt="Icone de um telefone"
               />
               <a
                 href="tel:+5521978991540"
-                className="text-red-800 text-xl font-bold"
+                className="text-red-600 text-xl font-bold"
               >
                 (21)9 7899-1540
               </a>
