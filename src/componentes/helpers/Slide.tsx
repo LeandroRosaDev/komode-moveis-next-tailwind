@@ -8,11 +8,11 @@ export function SlideHome() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const backgrounds = [
     {
-      desktop: "/assets/bg-home/1.webp",
+      desktop: "/assets/bg-home/2.webp",
       mobile: "/assets/bg-home/small-3.webp",
     },
     {
-      desktop: "/assets/bg-home/2.webp",
+      desktop: "/assets/bg-home/4.webp",
       mobile: "/assets/bg-home/small-1.webp",
     },
     {
@@ -20,7 +20,7 @@ export function SlideHome() {
       mobile: "/assets/bg-home/small-2.webp",
     },
     {
-      desktop: "/assets/bg-home/4.webp",
+      desktop: "/assets/bg-home/1.webp",
       mobile: "/assets/bg-home/small-4.webp",
     },
     {
@@ -32,7 +32,7 @@ export function SlideHome() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
-    }, 50000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [backgrounds.length]);

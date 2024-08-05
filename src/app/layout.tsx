@@ -36,6 +36,16 @@ export default function RootLayout({
       className={`${montserrat.className} ${roboto.className}`}
     >
       <head>
+        <meta property="og:title" content="Komode Móveis" />
+        <meta
+          property="og:description"
+          content="Conheça a Komode Móveis, encontre tudo que precisa para o seu lar bem aqui!"
+        />
+        <meta property="og:image" content="/assets/mini.png" />
+        <meta property="og:url" content="https://komodemoveis.com.br/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <link rel="icon" href="icon.ico" />
         <script
           dangerouslySetInnerHTML={{
