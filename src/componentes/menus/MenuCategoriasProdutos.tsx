@@ -8,7 +8,7 @@ const MenuCategoriasProdutos = () => {
         <h1 className="text-4xl uppercase font-light mt-48">Produtos</h1>
         <p>Confira abaixo todos os produtos disponíveis em nosso estoque</p>
       </div>
-      <div className="flex sm:justify-evenly justify-around flex-wrap gap-10 sm:gap-24 px-4 py-4 bg-white duration-500">
+      <div className="flex sm:justify-evenly justify-around flex-wrap gap-6 sm:gap-24 px-4 py-4 bg-white duration-500">
         {[
           {
             href: "/categorias/Sala de Estar",

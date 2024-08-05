@@ -1,4 +1,5 @@
 "use client";
+import { SlideHome } from "@/componentes/helpers/Slide";
 import MenuCategorias from "@/componentes/menus/MenuCategorias";
 import GetProdutosDestaque from "@/componentes/produtos/GetProdutosDestaque";
 import Image from "next/image";
@@ -8,8 +9,7 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* Background principal */}
-      <div className="bg-[url('/assets/header-bg-2.webp')] h-[580px] bg-cover bg-center"></div>
-
+      <SlideHome />
       {/* Tarja vermelha */}
       <div className="w-full bg-red-700 text-white flex justify-center items-center text-xs uppercase flex-wrap gap-2 py-4">
         <div className="flex items-center sm:gap-4 gap-2 px-4 text-center">
@@ -21,7 +21,7 @@ export default function Home() {
             height={50}
           />
         </div>
-        <div className="flex items-center sm:gap-4 gap-2 px-4 text-center">
+        <div className="sm:flex hidden items-center sm:gap-4 gap-2 px-4 text-center">
           <h1>Pagamento em até 12x sem juros no cartão</h1>
           <Image
             src="/assets/9.svg"
@@ -30,7 +30,7 @@ export default function Home() {
             height={50}
           />
         </div>
-        <div className="flex items-center sm:gap-4 gap-2 px-4 text-center">
+        <div className="sm:flex hidden items-center sm:gap-4 gap-2 px-4 text-center">
           <h1>E você só vai pagar na hora da entrega</h1>
           <Image
             src="/assets/10.svg"

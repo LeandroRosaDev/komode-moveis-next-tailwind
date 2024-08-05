@@ -40,11 +40,11 @@ const GetProdutosDestaque = () => {
   }
 
   return (
-    <section className="flex flex-col items-center justify-center">
-      <div className="flex flex-wrap sm:gap-5 gap-2 justify-center max-w-7xl my-8">
+    <section className="flex flex-col items-center justify-center ">
+      <div className="flex flex-wrap w-full sm:gap-5 gap-2 justify-center max-w-7xl my-8 ">
         {produtos.map((produto) => (
           <Link key={produto.id} href={`/produtos/${produto.id}`}>
-            <div className="relative w-48 sm:w-full bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-transform transform hover:scale-105 flex flex-col items-center text-center sm:p-4 p-1 group cursor-pointer">
+            <div className="relative w-full bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-transform transform hover:scale-105 flex flex-col items-center text-center sm:p-4 p-1 group cursor-pointer">
               {produto.fotos && produto.fotos.length > 0 && (
                 <div className="relative w-full h-48">
                   <Image
@@ -69,7 +69,7 @@ const GetProdutosDestaque = () => {
                   </div>
                 </div>
               )}
-              <div className="text-left w-40 sm:w-60 mt-4">
+              <div className="text-left w-40  sm:w-60 mt-4">
                 <h2 className="sm:text-lg text-sm truncate">{produto.nome}</h2>
                 <p className="line-through text-red-600 sm:text-sm text-xs">
                   De: {produto.preco_original}
