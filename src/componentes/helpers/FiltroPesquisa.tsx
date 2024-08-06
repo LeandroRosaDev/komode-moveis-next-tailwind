@@ -29,8 +29,8 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
   const categoryFilters: Record<string, string[]> = {
     "Sala de Estar": [
       "Sofá Retrátil",
-      "Sofá de Canto",
-      "Sofá de 2 e 3 lugares",
+      "Sofá Canto",
+      "Sofá 2 e 3 lugares",
       "Estante",
       "Painel",
       "Armario",
