@@ -4,7 +4,7 @@ import { Produto } from "@/interfaces/Produtos-types";
 import Image from "next/image";
 import Link from "next/link";
 import LoadingSpinner from "../helpers/Loading";
-import { getProductsDestaqueAction } from "@/action/produtos/get-produtos-destaque-action";
+import { getProductsPromocaoAction } from "@/action/produtos/get-produtos-promocao-action";
 
 const GetProdutosPromocao = () => {
   const [produtos, setProdutos] = useState<Produto[]>([]);
@@ -18,7 +18,7 @@ const GetProdutosPromocao = () => {
   useEffect(() => {
     async function loadProducts() {
       try {
-        const { data } = await getProductsDestaqueAction();
+        const { data } = await getProductsPromocaoAction();
         if (data && data.length > 0) {
           setProdutos(data);
         } else {
@@ -125,8 +125,8 @@ const GetProdutosPromocao = () => {
                 objectFit="cover"
                 className="w-full h-full transition-opacity duration-500 rounded-md group-hover:opacity-30"
               />
-              <div className="absolute top-8 -left-10 bg-yellow-500 text-black text-xs py-1 px-8 rounded-sm font-bold -rotate-45">
-                Queima de Estoque
+              <div className="absolute top-6 -left-6 bg-red-600 text-white text-xs py-1 px-8 rounded-sm font-bold -rotate-45">
+                Promoção
               </div>
               {produto.profundidade_fechado && (
                 <div className="absolute top-2 right-2 bg-green-700 text-white sm:text-xs text-[8px] sm:w-12 w-10 sm:h-12 h-10 sm:py-4 py-3 px-1 rounded-full font-bold text-center">

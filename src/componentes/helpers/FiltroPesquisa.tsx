@@ -31,6 +31,7 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
       "Sofá Retrátil",
       "Sofá Canto",
       "Sofá 2 e 3 lugares",
+      "Poltronas",
       "Estante",
       "Painel",
       "Armario",

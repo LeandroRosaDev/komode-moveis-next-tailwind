@@ -1,13 +1,18 @@
 "use client";
+import ModalFreteGratis from "@/componentes/helpers/ModalPopUp";
 import { SlideHome } from "@/componentes/helpers/Slide";
 import MenuCategorias from "@/componentes/menus/MenuCategorias";
+import { CarrosseldeProdutos } from "@/componentes/produtos/CarrosseldeProdutos";
 import GetProdutosDestaque from "@/componentes/produtos/GetProdutosDestaque";
+import GetProdutosPromocao from "@/componentes/produtos/GetProdutosPromocao";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="w-full">
+      <ModalFreteGratis />
+
       {/* Background principal */}
       <SlideHome />
       {/* Tarja vermelha */}
@@ -43,19 +48,19 @@ export default function Home() {
 
       <MenuCategorias />
 
-      {/* Produtos em destaque */}
+      {/* Produtos em promocao */}
       <section className="flex flex-col items-center justify-center my-16">
         <h1 className="text-4xl font-bold text-center mb-4">
-          Produtos Populares
+          Produtos em Promoção
         </h1>
         <h2 className="text-2xl text-center mb-8">
-          Venha conferir nossos produtos em destaque
+          Venha conferir nossos produtos em promoção
         </h2>
-        <GetProdutosDestaque />
+        <GetProdutosPromocao />
       </section>
 
       {/* Categorias populares */}
-      <section className="my-16">
+      <section className="mt-16">
         <div className="flex justify-center bg-black w-full overflow-hidden">
           <Link
             href="/categorias/sala de estar"
@@ -141,6 +146,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Produtos em destaque */}
+      <CarrosseldeProdutos />
+
       {/* Nossa História */}
       <section className="relative h-auto bg-[url('/assets/sobre-bg.webp')] bg-fixed bg-center bg-cover flex items-center justify-center text-center text-white py-16 px-4">
         <div className="flex flex-col items-center justify-center gap-4 w-full max-w-2xl">
@@ -174,8 +182,9 @@ export default function Home() {
             <Image
               src="/assets/duvidas-img-1.webp"
               alt="Imagem de entregas"
-              layout="fill"
               objectFit="cover"
+              width={200}
+              height={200}
               className="absolute top-0 left-0 w-full h-full z-0 border border-red-700 rounded-2xl"
             />
             <h1 className="relative z-10 text-2xl p-4 bg-red-700 bg-opacity-70 text-white font-semibold w-full text-center ">
@@ -192,8 +201,9 @@ export default function Home() {
             <Image
               src="/assets/duvidas-img-2.webp"
               alt="Imagem de um contrato"
-              layout="fill"
               objectFit="cover"
+              width={200}
+              height={200}
               className="absolute top-0 left-0 w-full h-full z-0 rounded-2xl border border-red-700"
             />
             <h1 className="relative z-10 text-2xl p-4 bg-red-700 bg-opacity-70 text-white font-semibold w-full text-center">
@@ -210,8 +220,9 @@ export default function Home() {
             <Image
               src="/assets/duvidas-img-3.webp"
               alt="Imagem de um cartão"
-              layout="fill"
               objectFit="cover"
+              width={200}
+              height={200}
               className="absolute top-0 left-0 w-full h-full z-0 rounded-2xl border border-red-700"
             />
             <h1 className="relative z-10 text-2xl p-4 bg-red-700 bg-opacity-70 text-white font-semibold w-full text-center">

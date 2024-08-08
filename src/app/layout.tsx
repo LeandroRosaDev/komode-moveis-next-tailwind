@@ -6,6 +6,7 @@ import Menu from "@/componentes/menus/Menu";
 import Footer from "@/componentes/helpers/Footer";
 import { Montserrat, Roboto } from "next/font/google";
 import Image from "next/image";
+import ModalFreteGratis from "@/componentes/helpers/ModalPopUp";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800", "900"],
