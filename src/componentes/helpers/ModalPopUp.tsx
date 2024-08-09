@@ -22,7 +22,7 @@ const ModalFreteGratis = () => {
     if (isModalOpen) {
       timer = setTimeout(() => {
         setIsModalOpen(false);
-      }, 7000);
+      }, 10000);
     }
     return () => clearTimeout(timer);
   }, [isModalOpen]);
@@ -47,19 +47,24 @@ const ModalFreteGratis = () => {
       className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
       onClick={handleClickOutside}
     >
-      <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full relative">
+      <div className="bg-red-700 p-6 rounded-lg shadow-lg max-w-lg w-full relative">
         <button
-          className="absolute top-2 right-2 text-black text-2xl"
+          className="absolute top-2 right-2 text-white text-2xl"
           onClick={handleCloseModal}
         >
           &times;
         </button>
-        <h2 className="text-xl font-bold mb-4">
-          Frete Grátis para todo o site
+        <h2 className="text-2xl text-white text-center font-bold mb-4">
+          Atenção! <br /> Aproveitem nossas promoções!!
         </h2>
-        <p className="text-gray-700">
-          Aproveite as nossas ofertas com frete grátis para qualquer lugar!
-        </p>
+        <div
+          className="text-white text-xl up text-center 
+"
+        >
+          <p>Frete Grátis para todo o site!</p>
+          <p>Pague somente na entrega!</p>
+          <p>Promoção por tempo limitado!</p>
+        </div>
       </div>
     </div>
   );
