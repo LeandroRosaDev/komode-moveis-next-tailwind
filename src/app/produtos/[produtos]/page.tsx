@@ -13,6 +13,7 @@ export default function ProdutoPage({ params }: PageParams) {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [stockNumber, setStockNumber] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,6 +39,21 @@ export default function ProdutoPage({ params }: PageParams) {
       }
     };
     fetchData();
+
+    // Geração de número randômico de estoque e persistência
+    const storedStockNumber = localStorage.getItem(
+      `stockNumber_${params.produtos}`
+    );
+    if (storedStockNumber) {
+      setStockNumber(Number(storedStockNumber));
+    } else {
+      const randomStockNumber = Math.floor(Math.random() * 4) + 1;
+      setStockNumber(randomStockNumber);
+      localStorage.setItem(
+        `stockNumber_${params.produtos}`,
+        randomStockNumber.toString()
+      );
+    }
   }, [params.produtos]);
 
   if (loading) {
@@ -135,10 +151,6 @@ export default function ProdutoPage({ params }: PageParams) {
                 Ou 12x de: {data.preco_parcelado}
               </span>
             </div>
-            {/* <div className="flex items-center gap-2">
-              <h3 className="text-lg">Cor:</h3>
-              <span className="w-5 h-5 border border-black rounded-full"></span>
-            </div> */}
             <a
               target="_blank"
               href={data.link_1}
@@ -155,6 +167,12 @@ export default function ProdutoPage({ params }: PageParams) {
             <p className="text-gray-700 mt-4">
               Pagamento realizado no ato da Entrega
             </p>
+            {stockNumber !== null && (
+              <div className="mt-4 p-4 bg-green-100 text-gray-600 rounded-md text-center w-72">
+                <h2 className="text-lg font-semibold">Quantidade disponível</h2>
+                <p className="text-2xl font-bold">{stockNumber} unidade(s)</p>
+              </div>
+            )}
           </div>
         </div>
         <div className="mt-8">
