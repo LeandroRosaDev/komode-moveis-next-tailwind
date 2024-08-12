@@ -187,8 +187,18 @@ const CategoriasPage = ({ params }: PageParams) => {
                 <p className="line-through text-red-600 sm:text-sm text-xs">
                   De: {produto.preco_original}
                 </p>
-                <p className="sm:text-xl text-sm">
-                  Por: {produto.preco} <span className="text-sm">à vista</span>
+                <p className="sm:text-xl text-sm flex items-end">
+                  Por: {produto.preco}{" "}
+                  <span className="text-sm flex ml-1">
+                    {" "}
+                    no pix{" "}
+                    <Image
+                      src="/assets/pix.svg"
+                      alt="icone do pix"
+                      width={20}
+                      height={20}
+                    />
+                  </span>
                 </p>
                 <p className="text-xs text-gray-600">
                   Ou no cartão em até 12x de: {produto.preco_parcelado}

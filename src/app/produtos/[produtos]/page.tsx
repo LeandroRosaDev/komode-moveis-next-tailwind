@@ -121,8 +121,15 @@ export default function ProdutoPage({ params }: PageParams) {
               <span className="font-bold text-lg text-red-600 line-through">
                 De: {data.preco_original}
               </span>
-              <span className="font-bold text-green-600 text-2xl">
-                Por: {data.preco}
+              <span className="font-bold text-green-700 text-2xl flex items-end ">
+                Por: {data.preco}{" "}
+                <span className="text-gray-900 text-base ml-1"> no pix</span>
+                <Image
+                  src="/assets/pix.svg"
+                  alt="icone do pix"
+                  width={30}
+                  height={20}
+                />{" "}
               </span>
               <span className="font-bold text-gray-500">
                 Ou 12x de: {data.preco_parcelado}
@@ -135,8 +142,14 @@ export default function ProdutoPage({ params }: PageParams) {
             <a
               target="_blank"
               href={data.link_1}
-              className="inline-block px-4 py-2 bg-green-500 text-white text-center rounded-md mt-4 hover:bg-green-600 transition"
+              className=" flex items-center justify-center gap-1 px-4 py-2 w-72 bg-green-500 text-white text-center rounded-md mt-4 hover:bg-green-600 transition"
             >
+              <Image
+                src="/assets/footer-social-3.png"
+                alt="icone do pix"
+                width={30}
+                height={20}
+              />
               Compre via WhatsApp
             </a>
             <p className="text-gray-700 mt-4">

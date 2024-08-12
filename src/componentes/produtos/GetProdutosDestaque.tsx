@@ -151,7 +151,7 @@ const GetProdutosPromocao = () => {
                 {" "}
                 no pix{" "}
                 <Image
-                  src="assets/pix.svg"
+                  src="/assets/pix.svg"
                   alt="icone do pix"
                   width={20}
                   height={20}
