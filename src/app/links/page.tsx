@@ -12,7 +12,7 @@ export default function reclamacaoPage() {
     <section className="w-full absolute z-50 h-full sm:h-screen bg-rose-200 flex flex-col items-center justify-center gap-3">
       <div className="text-center flex flex-col items-center gap-4">
         <Image
-          src="/assets/logotipo.png"
+          src="/assets/logotipo.webp"
           alt="logotipo"
           width={80}
           height={80}
@@ -72,7 +72,7 @@ export default function reclamacaoPage() {
           className="flex items-center w-[300px] sm:w-[500px] justify-start bg-rose-100 rounded-[300px] p-2 text-lg font-medium hover:bg-rose-300 duration-200"
         >
           <Image
-            src="/assets/logotipo.png"
+            src="/assets/logotipo.webp"
             alt="logotipo"
             width={50}
             height={50}
@@ -86,7 +86,7 @@ export default function reclamacaoPage() {
           className="flex items-center w-[300px] sm:w-[500px] justify-start bg-rose-100 rounded-[300px] p-2 text-lg font-medium hover:bg-rose-300 duration-200"
         >
           <Image
-            src="/assets/logotipo.png"
+            src="/assets/logotipo.webp"
             alt="logotipo"
             width={50}
             height={50}
@@ -100,7 +100,7 @@ export default function reclamacaoPage() {
           className="flex items-center w-[300px] sm:w-[500px] justify-start bg-rose-100 rounded-[300px] p-2 text-lg font-medium hover:bg-rose-300 duration-200"
         >
           <Image
-            src="/assets/logotipo.png"
+            src="/assets/logotipo.webp"
             alt="logotipo"
             width={50}
             height={50}
