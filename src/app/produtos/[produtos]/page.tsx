@@ -230,7 +230,10 @@ export default function ProdutoPage({ params }: PageParams) {
             <p className="text-gray-600 mt-8">
               * As imagens dos produtos são meramente ilustrativas. As cores
               podem sofrer variações dependendo da luminosidade, tipo de câmera
-              ou mesmo da visualização das imagens em dispositivos diversos.
+              ou mesmo da visualização das imagens em dispositivos diversos. A
+              Komode Móveis se reserva No direito de cometer alguns erros de
+              digitação. A quantidade de produto disponível em estoque pode não
+              ser a quantidade atual no estoque, consulta antes um vendedor.
             </p>
           </div>
         </div>

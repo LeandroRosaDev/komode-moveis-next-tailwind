@@ -36,6 +36,7 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
       "Painel",
       "Armario",
       "Mesa de Jantar",
+      "Poltronas",
     ],
     Cozinha: ["Kit de Cozinha", "balcao de cozinha", "mesa de alumínio"],
     Banheiro: ["Armário de banheiro"],
