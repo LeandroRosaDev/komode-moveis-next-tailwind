@@ -11,7 +11,7 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
 
   const globalFilters = {
     situacao: ["destaque", "promocao", "queima de estoque"],
-    cor: ["marrom", "preto", "vermelho", "azul", "terracota", "verde"],
+    cor: ["marrom", "preto", "vermelho", "azul", "terracota", "verde", "Bege"],
     disponibilidade: ["sim", "não"],
     rangedevalor: [
       "499",

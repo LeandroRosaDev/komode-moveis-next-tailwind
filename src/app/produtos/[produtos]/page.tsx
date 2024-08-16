@@ -112,7 +112,7 @@ export default function ProdutoPage({ params }: PageParams) {
                 &gt;
               </button>
             </div>
-            <div className="flex flex-wrap gap-2 mt-4">
+            <div className="flex flex-wrap justify-center gap-2 mt-4">
               {data.fotos.map((foto: any, index: number) => (
                 <Image
                   key={index}
@@ -129,6 +129,31 @@ export default function ProdutoPage({ params }: PageParams) {
                 />
               ))}
             </div>
+            {data.link_2 && (
+              <div className="mt-8 w-[400px] sm:w-[500px] my-2">
+                <h2 className="text-lg font-semibold">
+                  Assista abaixo o vídeo deste produto!
+                </h2>
+                <p className="text-xs">
+                  **Alguns produtos não estão disponíveis em vídeo nas cores do
+                  produto <br /> Alguns vídeos são do mesmo produto porém em
+                  cores similares
+                </p>
+                <div className="relative w-full max-w-xl mt-4">
+                  <iframe
+                    width="100%"
+                    height="400px"
+                    src={`https://www.youtube.com/embed/${
+                      data.link_2.split("v=")[1]
+                    }`}
+                    title="Demonstração do Produto"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="rounded-md"
+                  ></iframe>
+                </div>
+              </div>
+            )}
           </div>
           <div className="lg:w-1/2 flex flex-col gap-4">
             <h1 className="text-2xl font-semibold">{data.nome}</h1>
@@ -184,7 +209,6 @@ export default function ProdutoPage({ params }: PageParams) {
             </li>
           </ul>
           <div>
-            <h1>Veja o link ao lado {data.link_2}</h1>
             <h1 className="text-xl font-semibold">
               {data.nome_long} {data.cor}
             </h1>
@@ -227,22 +251,7 @@ export default function ProdutoPage({ params }: PageParams) {
                 <p>{data.braco}</p>
               </div>
             )}
-            <div className="mt-8">
-              <h2 className="text-lg font-semibold">Vídeo de Demonstração</h2>
-              <div className="relative w-full max-w-lg mt-4">
-                <iframe
-                  width="100%"
-                  height="500px"
-                  src={`https://www.youtube.com/embed/${
-                    data.link_2.split("v=")[1]
-                  }`}
-                  title="Demonstração do Produto"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="rounded-md"
-                ></iframe>
-              </div>
-            </div>
+
             <p className="text-gray-600 mt-8">
               * As imagens dos produtos são meramente ilustrativas. As cores
               podem sofrer variações dependendo da luminosidade, tipo de câmera
