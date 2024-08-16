@@ -40,7 +40,6 @@ export default function ProdutoPage({ params }: PageParams) {
     };
     fetchData();
 
-    // Geração de número randômico de estoque e persistência
     const storedStockNumber = localStorage.getItem(
       `stockNumber_${params.produtos}`
     );
@@ -137,7 +136,7 @@ export default function ProdutoPage({ params }: PageParams) {
               <span className="font-bold text-lg text-red-600 line-through">
                 De: {data.preco_original}
               </span>
-              <span className="font-bold text-green-700 text-2xl flex items-end ">
+              <span className="font-bold text-green-700 text-2xl flex items-end">
                 Por: {data.preco}{" "}
                 <span className="text-gray-900 text-base ml-1"> no pix</span>
                 <Image
@@ -185,6 +184,7 @@ export default function ProdutoPage({ params }: PageParams) {
             </li>
           </ul>
           <div>
+            <h1>Veja o link ao lado {data.link_2}</h1>
             <h1 className="text-xl font-semibold">
               {data.nome_long} {data.cor}
             </h1>
@@ -227,13 +227,29 @@ export default function ProdutoPage({ params }: PageParams) {
                 <p>{data.braco}</p>
               </div>
             )}
+            <div className="mt-8">
+              <h2 className="text-lg font-semibold">Vídeo de Demonstração</h2>
+              <div className="relative w-full max-w-lg mt-4">
+                <iframe
+                  width="100%"
+                  height="500px"
+                  src={`https://www.youtube.com/embed/${
+                    data.link_2.split("v=")[1]
+                  }`}
+                  title="Demonstração do Produto"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="rounded-md"
+                ></iframe>
+              </div>
+            </div>
             <p className="text-gray-600 mt-8">
               * As imagens dos produtos são meramente ilustrativas. As cores
               podem sofrer variações dependendo da luminosidade, tipo de câmera
               ou mesmo da visualização das imagens em dispositivos diversos. A
-              Komode Móveis se reserva No direito de cometer alguns erros de
+              Komode Móveis se reserva no direito de cometer alguns erros de
               digitação. A quantidade de produto disponível em estoque pode não
-              ser a quantidade atual no estoque, consulta antes um vendedor.
+              ser a quantidade atual no estoque, consulte antes um vendedor.
             </p>
           </div>
         </div>

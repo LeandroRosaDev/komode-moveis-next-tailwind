@@ -24,7 +24,11 @@ export default function reclamacaoPage() {
           sofisticação
         </p>
         <div className="flex gap-3  ">
-          <Link target="_blank" href="https://www.instagram.com/komodemd/">
+          <Link
+            className="hover:scale-105 duration-200"
+            target="_blank"
+            href="https://www.instagram.com/komodemd/"
+          >
             <Image
               src="/assets/links/10.svg"
               alt="Instagram Icon"
@@ -33,6 +37,7 @@ export default function reclamacaoPage() {
             />
           </Link>
           <Link
+            className="hover:scale-105 duration-200"
             target="_blank"
             href="https://www.facebook.com/komodemoveisedecorados"
           >
@@ -45,6 +50,7 @@ export default function reclamacaoPage() {
           </Link>
 
           <Link
+            className="hover:scale-105 duration-200"
             href="//api.whatsapp.com/send?phone=5521978991540&text=Olá tudo bem? Gostaria de saber mais sobre as promoções disponíveis para mim! Eu vim através do site de vocês!!"
             target="_blank"
           >
