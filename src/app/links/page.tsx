@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function reclamacaoPage() {
   return (
-    <section className="w-full absolute z-50 h-full sm:h-screen bg-rose-200 flex flex-col items-center justify-center gap-3">
+    <section className="w-full absolute z-50 h-full sm:h-screen bg-[#eecbbf] flex flex-col items-center justify-center gap-3">
       <div className="text-center flex flex-col items-center gap-4">
         <Image
           src="/assets/logotipo.webp"
@@ -75,7 +75,7 @@ export default function reclamacaoPage() {
         <Link
           target="_blank"
           href="https://www.instagram.com/komodemd/"
-          className="flex items-center w-[300px] sm:w-[500px] justify-start bg-rose-100 rounded-[300px] p-2 text-lg font-medium hover:bg-rose-300 duration-200"
+          className="flex items-center w-[300px] sm:w-[500px] justify-start bg-[#f2e2d4] rounded-[300px] border-2 border-[#f2e2d4] p-2 text-lg font-medium hover:bg-[#eecbbf] hover:text-white duration-200"
         >
           <Image
             src="/assets/logotipo.webp"
@@ -89,7 +89,7 @@ export default function reclamacaoPage() {
         <Link
           target="_blank"
           href="https://www.facebook.com/komodemoveisedecorados"
-          className="flex items-center w-[300px] sm:w-[500px] justify-start bg-rose-100 rounded-[300px] p-2 text-lg font-medium hover:bg-rose-300 duration-200"
+          className="flex items-center w-[300px] sm:w-[500px] justify-start bg-[#f2e2d4] rounded-[300px] border-2 border-[#f2e2d4] p-2 text-lg font-medium hover:bg-[#eecbbf] hover:text-white duration-200"
         >
           <Image
             src="/assets/logotipo.webp"
@@ -103,7 +103,7 @@ export default function reclamacaoPage() {
         <Link
           target="_blank"
           href="//api.whatsapp.com/send?phone=5521978991540&text=Olá tudo bem? Gostaria de saber mais sobre as promoções disponíveis para mim! Eu vim através do site de vocês!!"
-          className="flex items-center w-[300px] sm:w-[500px] justify-start bg-rose-100 rounded-[300px] p-2 text-lg font-medium hover:bg-rose-300 duration-200"
+          className="flex items-center w-[300px] sm:w-[500px] justify-start bg-[#f2e2d4] rounded-[300px] border-2 border-[#f2e2d4] p-2 text-lg font-medium hover:bg-[#eecbbf] hover:text-white duration-200"
         >
           <Image
             src="/assets/logotipo.webp"
@@ -113,6 +113,20 @@ export default function reclamacaoPage() {
             className=" rounded-full mr-20 sm:mr-40"
           />{" "}
           <h1>Whatsapp</h1>
+        </Link>
+        <Link
+          target="_blank"
+          href="https://www.youtube.com/@komodemoveis"
+          className="flex items-center w-[300px] sm:w-[500px] justify-start bg-[#f2e2d4] rounded-[300px] border-2 border-[#f2e2d4] p-2 text-lg font-medium hover:bg-[#eecbbf] hover:text-white duration-200"
+        >
+          <Image
+            src="/assets/logotipo.webp"
+            alt="logotipo"
+            width={50}
+            height={50}
+            className=" rounded-full mr-20 sm:mr-40"
+          />{" "}
+          <h1>YouTube</h1>
         </Link>
       </div>
     </section>
