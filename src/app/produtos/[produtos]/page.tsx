@@ -191,10 +191,19 @@ export default function ProdutoPage({ params }: PageParams) {
             <p className="text-gray-700 mt-4">
               Pagamento realizado no ato da Entrega
             </p>
-            {stockNumber !== null && (
-              <div className="mt-4 p-4 bg-green-100 text-gray-600 rounded-md text-center w-72">
-                <h2 className="text-lg font-semibold">Quantidade disponível</h2>
-                <p className="text-2xl font-bold">{stockNumber} unidade(s)</p>
+
+            {data.disponibilidade === "sim" ? (
+              stockNumber !== null && (
+                <div className="mt-4 p-4 bg-green-100 text-gray-600 rounded-md text-center w-72">
+                  <h2 className="text-lg font-semibold">
+                    Quantidade disponível
+                  </h2>
+                  <p className="text-2xl font-bold">{stockNumber} unidade(s)</p>
+                </div>
+              )
+            ) : (
+              <div className="mt-4 p-4 bg-red-500 text-white rounded-md text-center w-72">
+                <h2 className="text-lg font-semibold">Produto indisponível</h2>
               </div>
             )}
           </div>
