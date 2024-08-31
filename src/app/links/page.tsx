@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function reclamacaoPage() {
   return (
-    <section className="w-full min-h-screen absolute z-50 bg-[#eecbbf] flex flex-col items-center justify-center gap-3">
+    <section className="w-full min-h-screen absolute z-50 bg-[#eecbbf] flex flex-col items-center justify-center gap-3 pt-4 pb-[400px] sm:pb-2">
       <div className="text-center flex flex-col items-center gap-4">
         <Image
           src="/assets/logotipo.webp"
