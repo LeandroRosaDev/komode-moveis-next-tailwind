@@ -188,7 +188,7 @@ const GetProdutosPromocao = () => {
             key={index}
             className="w-full h-full flex-shrink-0 flex justify-center items-center"
           >
-            <div className="grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-2 gap-2 sm:gap-4">
+            <div className="w-full max-w-[1200px] grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-2 gap-2 sm:gap-4">
               {renderProdutos(group)}
             </div>
           </div>

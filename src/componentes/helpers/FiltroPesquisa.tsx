@@ -8,6 +8,7 @@ interface FiltroProps {
 const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
   const [filters, setFilters] = useState<Record<string, string>>({});
   const [availableFilters, setAvailableFilters] = useState<string[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
 
   const globalFilters = {
     situacao: ["destaque", "promocao", "queima de estoque"],
@@ -67,6 +68,16 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
     }
   }, [params.categorias]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleFilterChange = (key: string, value: string) => {
     setFilters((prevFilters) => {
       const newFilters = { ...prevFilters };
@@ -90,86 +101,165 @@ const FiltroComponent = ({ params, onFilterChange }: FiltroProps) => {
   return (
     <section className="w-full md:w-64 h-full p-4 bg-gray-100 rounded-lg shadow-md mb-2">
       <h1 className="mb-4 text-lg font-semibold">Filtros:</h1>
-      <div className="flex flex-wrap justify-between sm:flex-col flex-row gap-2 ">
+      <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-between sm:flex-col flex-row gap-2 ">
         <div>
           <h2 className="mb-2 text-base font-semibold">Produtos:</h2>
-          {availableFilters.map((subCategoria) => (
-            <label
-              key={subCategoria}
-              className="flex items-center mb-2 text-sm"
+          {isMobile ? (
+            <select
+              className="w-full border border-gray-300 rounded-md bg-gray-100 p-2"
+              value={filters.sub_categoria || ""}
+              onChange={(e) =>
+                handleFilterChange("sub_categoria", e.target.value)
+              }
             >
-              <input
-                type="checkbox"
-                checked={filters.sub_categoria === subCategoria}
-                onChange={() =>
-                  handleFilterChange("sub_categoria", subCategoria)
-                }
-                className="mr-2"
-              />
-              {subCategoria}
-            </label>
-          ))}
+              <option value="">Selecione uma categoria</option>
+              {availableFilters.map((subCategoria) => (
+                <option key={subCategoria} value={subCategoria}>
+                  {subCategoria}
+                </option>
+              ))}
+            </select>
+          ) : (
+            availableFilters.map((subCategoria) => (
+              <label
+                key={subCategoria}
+                className="flex items-center mb-2 text-sm"
+              >
+                <input
+                  type="checkbox"
+                  checked={filters.sub_categoria === subCategoria}
+                  onChange={() =>
+                    handleFilterChange("sub_categoria", subCategoria)
+                  }
+                  className="mr-2"
+                />
+                {subCategoria}
+              </label>
+            ))
+          )}
         </div>
         <div>
           <h2 className="mb-2 text-base font-semibold">Largura:</h2>
-          {globalFilters.largura.map((largura) => (
-            <label key={largura} className="flex items-center mb-2 text-sm">
-              <input
-                type="checkbox"
-                checked={filters.largura === largura}
-                onChange={() => handleFilterChange("largura", largura)}
-                className="mr-2"
-              />
-              {largura} m
-            </label>
-          ))}
+          {isMobile ? (
+            <select
+              className="w-full border border-gray-300 rounded-md bg-gray-100 p-2"
+              value={filters.largura || ""}
+              onChange={(e) => handleFilterChange("largura", e.target.value)}
+            >
+              <option value="">Selecione uma largura</option>
+              {globalFilters.largura.map((largura) => (
+                <option key={largura} value={largura}>
+                  {largura} m
+                </option>
+              ))}
+            </select>
+          ) : (
+            globalFilters.largura.map((largura) => (
+              <label key={largura} className="flex items-center mb-2 text-sm">
+                <input
+                  type="checkbox"
+                  checked={filters.largura === largura}
+                  onChange={() => handleFilterChange("largura", largura)}
+                  className="mr-2"
+                />
+                {largura} m
+              </label>
+            ))
+          )}
         </div>
         <div>
           <h2 className="mb-2 text-base font-semibold">Promoção:</h2>
-          {globalFilters.situacao.map((situacao) => (
-            <label key={situacao} className="flex items-center mb-2 text-sm">
-              <input
-                type="checkbox"
-                checked={filters.situacao === situacao}
-                onChange={() => handleFilterChange("situacao", situacao)}
-                className="mr-2"
-              />
-              {situacao.charAt(0).toUpperCase() + situacao.slice(1)}
-            </label>
-          ))}
+          {isMobile ? (
+            <select
+              className="w-full border border-gray-300 rounded-md bg-gray-100 p-2"
+              value={filters.situacao || ""}
+              onChange={(e) => handleFilterChange("situacao", e.target.value)}
+            >
+              <option value="">Selecione uma situação</option>
+              {globalFilters.situacao.map((situacao) => (
+                <option key={situacao} value={situacao}>
+                  {situacao.charAt(0).toUpperCase() + situacao.slice(1)}
+                </option>
+              ))}
+            </select>
+          ) : (
+            globalFilters.situacao.map((situacao) => (
+              <label key={situacao} className="flex items-center mb-2 text-sm">
+                <input
+                  type="checkbox"
+                  checked={filters.situacao === situacao}
+                  onChange={() => handleFilterChange("situacao", situacao)}
+                  className="mr-2"
+                />
+                {situacao.charAt(0).toUpperCase() + situacao.slice(1)}
+              </label>
+            ))
+          )}
         </div>
         <div>
           <h2 className="mb-2 text-base font-semibold">Cor:</h2>
-          {globalFilters.cor.map((cor) => (
-            <label key={cor} className="flex items-center mb-2 text-sm">
-              <input
-                type="checkbox"
-                checked={filters.cor === cor}
-                onChange={() => handleFilterChange("cor", cor)}
-                className="mr-2"
-              />
-              {cor.charAt(0).toUpperCase() + cor.slice(1)}
-            </label>
-          ))}
+          {isMobile ? (
+            <select
+              className="w-full border border-gray-300 rounded-md bg-gray-100 p-2"
+              value={filters.cor || ""}
+              onChange={(e) => handleFilterChange("cor", e.target.value)}
+            >
+              <option value="">Selecione uma cor</option>
+              {globalFilters.cor.map((cor) => (
+                <option key={cor} value={cor}>
+                  {cor.charAt(0).toUpperCase() + cor.slice(1)}
+                </option>
+              ))}
+            </select>
+          ) : (
+            globalFilters.cor.map((cor) => (
+              <label key={cor} className="flex items-center mb-2 text-sm">
+                <input
+                  type="checkbox"
+                  checked={filters.cor === cor}
+                  onChange={() => handleFilterChange("cor", cor)}
+                  className="mr-2"
+                />
+                {cor.charAt(0).toUpperCase() + cor.slice(1)}
+              </label>
+            ))
+          )}
         </div>
         <div>
           <h2 className="mb-2 text-base font-semibold">Disponibilidade:</h2>
-          {globalFilters.disponibilidade.map((disponibilidade) => (
-            <label
-              key={disponibilidade}
-              className="flex items-center mb-2 text-sm"
+          {isMobile ? (
+            <select
+              className="w-full border border-gray-300 rounded-md bg-gray-100 p-2"
+              value={filters.disponibilidade || ""}
+              onChange={(e) =>
+                handleFilterChange("disponibilidade", e.target.value)
+              }
             >
-              <input
-                type="checkbox"
-                checked={filters.disponibilidade === disponibilidade}
-                onChange={() =>
-                  handleFilterChange("disponibilidade", disponibilidade)
-                }
-                className="mr-2"
-              />
-              Em estoque: {disponibilidade}
-            </label>
-          ))}
+              <option value="">Selecione a disponibilidade</option>
+              {globalFilters.disponibilidade.map((disponibilidade) => (
+                <option key={disponibilidade} value={disponibilidade}>
+                  Em estoque: {disponibilidade}
+                </option>
+              ))}
+            </select>
+          ) : (
+            globalFilters.disponibilidade.map((disponibilidade) => (
+              <label
+                key={disponibilidade}
+                className="flex items-center mb-2 text-sm"
+              >
+                <input
+                  type="checkbox"
+                  checked={filters.disponibilidade === disponibilidade}
+                  onChange={() =>
+                    handleFilterChange("disponibilidade", disponibilidade)
+                  }
+                  className="mr-2"
+                />
+                Em estoque: {disponibilidade}
+              </label>
+            ))
+          )}
         </div>
         <div>
           <h2 className="mb-2 text-base font-semibold">Range de Valor:</h2>

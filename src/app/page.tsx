@@ -49,7 +49,7 @@ export default function Home() {
       <MenuCategorias />
 
       {/* Produtos em promocao */}
-      <section className="flex flex-col items-center justify-center my-16">
+      <section className="flex flex-col items-center justify-center my-16 p-3">
         <h1 className="text-4xl font-bold text-center mb-4">
           Produtos em Promoção
         </h1>

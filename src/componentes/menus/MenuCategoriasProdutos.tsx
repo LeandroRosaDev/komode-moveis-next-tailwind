@@ -4,11 +4,11 @@ import Link from "next/link";
 const MenuCategoriasProdutos = () => {
   return (
     <main>
-      <div className="bg-[url('/assets/produtos/produtos-bg.webp')] relative sm:h-[580px] h-[380px] w-full bg-cover bg-center text-white flex flex-col items-center justify-center -mt-12 sm:-mt-48 text-center px-2">
+      <div className="bg-[url('/assets/produtos/produtos-bg.webp')] relative sm:h-[580px] h-[380px] w-full bg-cover bg-center text-white flex flex-col items-center justify-center -mt-12 sm:-mt-48 text-center">
         <h1 className="text-4xl uppercase font-light mt-48">Produtos</h1>
         <p>Confira abaixo todos os produtos disponíveis em nosso estoque</p>
       </div>
-      <div className="flex sm:justify-evenly justify-around flex-wrap gap-6 sm:gap-24 px-4 py-4 bg-white duration-500">
+      <div className="flex sm:justify-evenly justify-around flex-wrap gap-2 p-2 sm:p-4 bg-white duration-500">
         {[
           {
             href: "/categorias/Sala de Estar",
@@ -46,24 +46,18 @@ const MenuCategoriasProdutos = () => {
             title: "Escritório",
             text: "Icone de um desenho de uma mesa de escritório representando um Escritório",
           },
-          {
-            href: "/categorias/Lavanderia",
-            src: "/assets/menu/15.svg",
-            title: "Lavanderia",
-            text: "Icone de um desenho de uma máquina de lavar representando uma Lavanderia",
-          },
         ].map((category) => (
           <Link
             key={category.href}
             href={category.href}
-            className="flex flex-col items-center gap-4 group"
+            className="flex flex-col items-center gap-4 group mx-4"
           >
             <Image
               src={category.src}
               alt={category.text}
               width={60}
               height={70}
-              className="transition-transform duration-600 group-hover:mt-[-10px] sm:w-[60px] w-12"
+              className="transition-transform duration-600 group-hover:mt-[-10px] sm:w-[60px] w-10"
             />
             <p className="text-center text-xs sm:text-base">{category.title}</p>
           </Link>

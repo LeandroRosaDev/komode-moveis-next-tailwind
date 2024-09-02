@@ -5,7 +5,7 @@ const MenuCategorias = () => {
   return (
     <main>
       <div className="relative h-56 w-full bg-cover bg-center text-black flex flex-col items-center justify-center -mt-48"></div>
-      <div className=" sm:gap-24 gap-6 flex justify-around sm:justify-evenly flex-wrap  p-4 duration-500 bg">
+      <div className=" flex sm:justify-evenly justify-around flex-wrap gap-2 p-2 sm:p-4 duration-500">
         {[
           {
             href: "/categorias/Sala de Estar",
@@ -43,24 +43,18 @@ const MenuCategorias = () => {
             title: "Escritório",
             text: "Icone de um desenho de uma mesa de escritório representando um Escritório",
           },
-          {
-            href: "/categorias/Lavanderia",
-            src: "/assets/menu/15.svg",
-            title: "Lavanderia",
-            text: "Icone de um desenho de uma máquina de lavar representando uma Lavanderia",
-          },
         ].map((category) => (
           <Link
             key={category.href}
             href={category.href}
-            className="flex flex-col items-center gap-4 group"
+            className="flex flex-col items-center gap-4 group mx-4"
           >
             <Image
               src={category.src}
               alt={category.text}
               width={60}
               height={70}
-              className="transition-transform duration-600 group-hover:mt-[-10px] sm:w-[60px] w-14"
+              className="transition-transform duration-600 group-hover:mt-[-10px] sm:w-[60px] w-10"
             />
             <p className="text-center text-xs sm:text-base">{category.title}</p>
           </Link>

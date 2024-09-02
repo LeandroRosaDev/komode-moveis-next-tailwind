@@ -78,15 +78,15 @@ const CategoriasPage = ({ params }: PageParams) => {
             />
           </div>
 
-          <div className="flex flex-wrap sm:gap-5 gap-1 justify-center items-start max-w-5xl mb-20 ">
+          <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-5 gap-1 justify-center items-start max-w-5xl mb-20 p-3">
             {produtos.map((produto: any) => (
               <div
                 key={produto.id}
-                className="relative w-44 sm:w-72 h-[250px] sm:h-[350px] bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-transform transform hover:scale-105 flex flex-col items-center text-center p-1 sm:p-4 group cursor-pointer"
+                className="flex flex-col items-center text-center justify-around relative w-full col-span-1 pb-2 sm:p-1 bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-transform transform hover:scale-105 group cursor-pointer"
               >
                 {produto.fotos && produto.fotos.length > 0 && (
                   <Link href={`/produtos/${produto.id}`}>
-                    <div className="relative w-full sm:h-48 h-36">
+                    <div className="relative w-full h-full ">
                       <Image
                         src={produto.fotos[0].src}
                         alt={`Imagem de ${produto.nome}`}
@@ -111,16 +111,25 @@ const CategoriasPage = ({ params }: PageParams) => {
                     </div>
                   </Link>
                 )}
-                <div className="text-left w-full sm:w-60 sm:mt-4 mt-0 p-1">
+                <div className="text-left w-full h-full p-1">
                   <h2 className="sm:text-lg text-sm truncate">
                     {produto.nome}
                   </h2>
                   <p className="line-through text-red-600 sm:text-sm text-xs">
                     De: {produto.preco_original}
                   </p>
-                  <p className="sm:text-xl text-sm">
+                  <p className="sm:text-xl text-sm flex items-end">
                     Por: {produto.preco}{" "}
-                    <span className="text-sm">à vista</span>
+                    <span className="text-sm flex ml-1">
+                      {" "}
+                      no pix{" "}
+                      <Image
+                        src="/assets/pix.svg"
+                        alt="icone do pix"
+                        width={20}
+                        height={20}
+                      />
+                    </span>
                   </p>
                   <p className="text-xs text-gray-600">
                     Ou no cartão em até 12x de: {produto.preco_parcelado}
@@ -149,15 +158,15 @@ const CategoriasPage = ({ params }: PageParams) => {
           />
         </div>
 
-        <div className="flex flex-wrap sm:gap-5 gap-1 justify-center items-start max-w-5xl mb-20 ">
+        <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-5 gap-1 justify-center items-start max-w-5xl mb-20 p-3">
           {produtos.map((produto: any) => (
             <div
               key={produto.id}
-              className="relative w-44 sm:w-72 h-[250px] sm:h-[350px] bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-transform transform hover:scale-105 flex flex-col items-center text-center p-1 sm:p-4 group cursor-pointer"
+              className="flex flex-col items-center text-center justify-around relative w-full col-span-1 pb-2 sm:p-1 bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-transform transform hover:scale-105 group cursor-pointer"
             >
               {produto.fotos && produto.fotos.length > 0 && (
                 <Link href={`/produtos/${produto.id}`}>
-                  <div className="relative w-full sm:h-48 h-36">
+                  <div className="relative w-full h-full ">
                     <Image
                       src={produto.fotos[0].src}
                       alt={`Imagem de ${produto.nome}`}
@@ -182,7 +191,7 @@ const CategoriasPage = ({ params }: PageParams) => {
                   </div>
                 </Link>
               )}
-              <div className="text-left w-full sm:w-60 sm:mt-4 mt-0 p-1">
+              <div className="text-left w-full h-full p-1">
                 <h2 className="sm:text-lg text-sm truncate">{produto.nome}</h2>
                 <p className="line-through text-red-600 sm:text-sm text-xs">
                   De: {produto.preco_original}

@@ -24,7 +24,7 @@ export function CarrosseldeProdutos() {
 
   return (
     <section className="relative overflow-hidden">
-      <div className="relative z-10 py-20 sm:py-22">
+      <div className="relative z-10 py-20 sm:py-22 p-3">
         <GetProdutosDestaque />
       </div>
       <div className="absolute top-0 left-0 w-full bg-red-600 text-white overflow-hidden">
